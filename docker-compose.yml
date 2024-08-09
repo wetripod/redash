@@ -33,6 +33,7 @@ services:
     environment:
       <<: *redash-environment
       PYTHONUNBUFFERED: 0
+      REDASH_ADDITIONAL_QUERY_RUNNERS: redash.query_runner.python
   scheduler:
     <<: *redash-service
     command: dev_scheduler
